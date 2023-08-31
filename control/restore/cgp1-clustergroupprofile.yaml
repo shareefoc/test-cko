@@ -1,0 +1,155 @@
+apiVersion: netop.mgr/v1alpha1
+kind: ClusterGroupProfile
+metadata:
+  creationTimestamp: "2023-08-31T09:18:44Z"
+  generation: 1
+  managedFields:
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:config_overrides:
+          .: {}
+          f:aci_cni_config:
+            .: {}
+            f:aci_config:
+              .: {}
+              f:vmm_domain:
+                .: {}
+                f:mcast_range: {}
+                f:nested_inside: {}
+            f:kube_config:
+              .: {}
+              f:drop_log_config: {}
+              f:istio_config: {}
+              f:multus: {}
+              f:nodepodif_config: {}
+              f:operator_managed_config: {}
+              f:sriov_config: {}
+            f:logging: {}
+            f:net_config: {}
+            f:registry: {}
+          f:aci_config:
+            .: {}
+            f:cluster_l3out:
+              .: {}
+              f:bgp:
+                .: {}
+                f:peering: {}
+              f:svi: {}
+              f:vrf: {}
+            f:l3out: {}
+            f:physical_domain: {}
+            f:vrf: {}
+          f:calico_cni_config: {}
+          f:cko_proxy_config: {}
+          f:cni: {}
+          f:connectivity_checker:
+            .: {}
+            f:reachability_test_enable:
+              .: {}
+              f:external_url: {}
+              f:periodic_sync: {}
+          f:context:
+            .: {}
+            f:l3out: {}
+            f:vrf: {}
+          f:distro: {}
+          f:fabricinfra: {}
+          f:gitops:
+            .: {}
+            f:base64_encoded_argo_manifests: {}
+          f:lb_config: {}
+          f:monitoring_config: {}
+          f:net_config: {}
+          f:operator_config:
+            .: {}
+            f:mode: {}
+          f:profile:
+            .: {}
+            f:ingress: {}
+            f:loadbalancer: {}
+            f:monitoring: {}
+            f:service_mesh: {}
+          f:registry: {}
+          f:service_mesh_config: {}
+          f:topology: {}
+        f:selector: {}
+    manager: controller
+    operation: Update
+    time: "2023-08-31T09:18:44Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:mode: {}
+        f:state: {}
+    manager: manager
+    operation: Update
+    time: "2023-08-31T09:18:44Z"
+  name: cgp1
+  namespace: netop-manager
+  resourceVersion: "15229"
+  uid: 95efc93f-95bc-4c20-ab98-b83d93c69cf0
+spec:
+  config_overrides:
+    aci_cni_config:
+      aci_config:
+        vmm_domain:
+          mcast_range: {}
+          nested_inside: {}
+      kube_config:
+        drop_log_config: {}
+        istio_config: {}
+        multus: {}
+        nodepodif_config: {}
+        operator_managed_config: {}
+        sriov_config: {}
+      logging: {}
+      net_config: {}
+      registry: {}
+    aci_config:
+      cluster_l3out:
+        bgp:
+          peering: {}
+        svi: {}
+        vrf: {}
+      l3out: {}
+      physical_domain: {}
+      vrf: {}
+    calico_cni_config: {}
+    cko_proxy_config: {}
+    cni: aci-cni
+    connectivity_checker:
+      reachability_test_enable:
+        external_url: {}
+        periodic_sync: {}
+    context:
+      l3out: {}
+      vrf: {}
+    distro: {}
+    fabricinfra: {}
+    gitops:
+      base64_encoded_argo_manifests: ""
+    lb_config: {}
+    monitoring_config: {}
+    net_config: {}
+    operator_config:
+      mode: managed
+    profile:
+      ingress: Nginx
+      loadbalancer: Fabric LB
+      monitoring: Prometheus
+      service_mesh: Istio
+    registry: {}
+    service_mesh_config: {}
+    topology: {}
+  selector:
+    matchLabels:
+      fabric: ""
+      site: ""
+status:
+  mode: managed
+  state: true
