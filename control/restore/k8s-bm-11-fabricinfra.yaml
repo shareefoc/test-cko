@@ -1,0 +1,150 @@
+apiVersion: netop.mgr/v1alpha1
+kind: FabricInfra
+metadata:
+  creationTimestamp: "2023-08-31T18:38:25Z"
+  finalizers:
+  - fabricinfra.netop.mgr/finalizer
+  generation: 1
+  managedFields:
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:bgp:
+          .: {}
+          f:aci_as_number: {}
+          f:remote_as_numbers: {}
+        f:contexts:
+          .: {}
+          f:1:
+            .: {}
+            f:aep: {}
+            f:l3out: {}
+            f:vrf:
+              .: {}
+              f:name: {}
+              f:tenant: {}
+        f:credentials:
+          .: {}
+          f:hosts: {}
+          f:secretRef:
+            .: {}
+            f:name: {}
+        f:external_subnets: {}
+        f:fabric_type: {}
+        f:infra_vlan: {}
+        f:internal_subnets: {}
+        f:leafs: {}
+        f:mcast_subnets: {}
+        f:pod_subnets: {}
+        f:provision_fabric: {}
+        f:spines: {}
+        f:topology:
+          .: {}
+          f:rack: {}
+        f:vlans: {}
+    manager: controller
+    operation: Update
+    time: "2023-08-31T18:38:25Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"fabricinfra.netop.mgr/finalizer": {}
+      f:status:
+        .: {}
+        f:available:
+          .: {}
+          f:contexts:
+            .: {}
+            f:1:
+              .: {}
+              f:aep: {}
+              f:l3out: {}
+              f:vrf:
+                .: {}
+                f:name: {}
+                f:tenant: {}
+          f:external_subnets: {}
+          f:internal_subnets: {}
+          f:mcast_subnets: {}
+          f:pod_subnets: {}
+          f:remote_as_numbers: {}
+          f:vlans: {}
+        f:ready: {}
+    manager: manager
+    operation: Update
+    time: "2023-08-31T18:38:25Z"
+  name: k8s-bm-11
+  namespace: netop-manager
+  resourceVersion: "94159"
+  uid: 147d00d4-ecaa-449d-bd82-f906b913bece
+spec:
+  bgp:
+    aci_as_number: 1
+    remote_as_numbers:
+    - 62510
+  contexts:
+    "1":
+      aep: test
+      l3out: {}
+      vrf:
+        name: test
+        tenant: test
+  credentials:
+    hosts:
+    - 10.30.120.140
+    secretRef:
+      name: test
+  external_subnets:
+  - 10.10.2.0/24
+  fabric_type: aci
+  infra_vlan: 4020
+  internal_subnets:
+  - 10.10.2.0/24
+  leafs: 1
+  mcast_subnets:
+  - 225.6.1.0/24
+  pod_subnets:
+  - 10.10.2.0/24
+  provision_fabric: false
+  spines: 1
+  topology:
+    rack:
+    - aci_pod_id: 1
+      id: 1
+      leaf:
+      - id: 101
+      - id: 102
+      node:
+      - name: node1
+      - name: node2
+  vlans:
+  - 101
+  - 102
+status:
+  available:
+    contexts:
+      "1":
+        aep: test
+        l3out: {}
+        vrf:
+          name: test
+          tenant: test
+    external_subnets:
+    - 10.10.2.0/24
+    internal_subnets:
+    - 10.10.2.0/24
+    mcast_subnets:
+    - 225.6.1.0/24
+    pod_subnets:
+    - 10.10.2.0/24
+    remote_as_numbers:
+    - 62510
+    vlans:
+    - 101
+    - 102
+  ready: true
