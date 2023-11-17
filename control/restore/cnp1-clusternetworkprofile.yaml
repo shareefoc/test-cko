@@ -1,0 +1,179 @@
+apiVersion: netop.mgr/v1alpha1
+kind: ClusterNetworkProfile
+metadata:
+  creationTimestamp: "2023-11-17T15:30:22Z"
+  generation: 1
+  managedFields:
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:config_overrides:
+          .: {}
+          f:aci_cni_config:
+            .: {}
+            f:aci_config:
+              .: {}
+              f:vmm_domain:
+                .: {}
+                f:mcast_range: {}
+                f:nested_inside: {}
+            f:kube_config:
+              .: {}
+              f:drop_log_config: {}
+              f:istio_config: {}
+              f:multus: {}
+              f:nodepodif_config: {}
+              f:operator_managed_config: {}
+              f:sriov_config: {}
+            f:logging: {}
+            f:net_config:
+              .: {}
+              f:interface_mtu: {}
+            f:registry: {}
+          f:aci_config:
+            .: {}
+            f:cluster_l3out:
+              .: {}
+              f:bgp:
+                .: {}
+                f:peering: {}
+              f:svi:
+                .: {}
+                f:mtu: {}
+              f:vrf: {}
+            f:l3out: {}
+            f:physical_domain: {}
+            f:vrf: {}
+          f:calico_cni_config: {}
+          f:cko_proxy_config: {}
+          f:cni: {}
+          f:connectivity_checker:
+            .: {}
+            f:reachability_test_enable:
+              .: {}
+              f:external_url: {}
+              f:periodic_sync: {}
+            f:reachability_tests: {}
+          f:context:
+            .: {}
+            f:l3out: {}
+            f:vrf: {}
+          f:distro:
+            .: {}
+            f:platform: {}
+            f:type: {}
+          f:fabricinfra:
+            .: {}
+            f:name: {}
+          f:gitops:
+            .: {}
+            f:base64_encoded_argo_manifests: {}
+          f:lb_config:
+            .: {}
+            f:lb_type: {}
+          f:monitoring_config:
+            .: {}
+            f:monitoring_type: {}
+          f:net_config: {}
+          f:operator_config:
+            .: {}
+            f:mode: {}
+          f:profile:
+            .: {}
+            f:loadbalancer: {}
+            f:monitoring: {}
+            f:service_mesh: {}
+          f:registry: {}
+          f:service_mesh_config:
+            .: {}
+            f:name: {}
+          f:topology:
+            .: {}
+            f:rack: {}
+    manager: controller
+    operation: Update
+    time: "2023-11-17T15:30:22Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:ready: {}
+    manager: manager
+    operation: Update
+    subresource: status
+    time: "2023-11-17T15:30:22Z"
+  name: cnp1
+  namespace: netop-manager
+  resourceVersion: "20538"
+  uid: 38d9d16e-9908-4e33-b241-2bfd54685900
+spec:
+  config_overrides:
+    aci_cni_config:
+      aci_config:
+        vmm_domain:
+          mcast_range: {}
+          nested_inside: {}
+      kube_config:
+        drop_log_config: {}
+        istio_config: {}
+        multus: {}
+        nodepodif_config: {}
+        operator_managed_config: {}
+        sriov_config: {}
+      logging: {}
+      net_config:
+        interface_mtu: 1500
+      registry: {}
+    aci_config:
+      cluster_l3out:
+        bgp:
+          peering: {}
+        svi:
+          mtu: 1500
+        vrf: {}
+      l3out: {}
+      physical_domain: {}
+      vrf: {}
+    calico_cni_config: {}
+    cko_proxy_config: {}
+    cni: aci
+    connectivity_checker:
+      reachability_test_enable:
+        external_url: {}
+        periodic_sync: {}
+      reachability_tests:
+      - pod_to_node
+      - pod_to_LB_VIP
+      - pod_to_External
+    context:
+      l3out: {}
+      vrf: {}
+    distro:
+      platform: baremetal
+      type: openshift
+    fabricinfra:
+      name: fab1
+    gitops:
+      base64_encoded_argo_manifests: ""
+    lb_config:
+      lb_type: metallb
+    monitoring_config:
+      monitoring_type: prometheus
+    net_config: {}
+    operator_config:
+      mode: managed
+    profile:
+      loadbalancer: metallb
+      monitoring: prometheus
+      service_mesh: isto
+    registry: {}
+    service_mesh_config:
+      name: isto
+    topology:
+      rack:
+      - {}
+status:
+  ready: true
