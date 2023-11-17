@@ -1,0 +1,83 @@
+apiVersion: netop.mgr/v1alpha1
+kind: FabricInfra
+metadata:
+  creationTimestamp: "2023-11-17T15:29:38Z"
+  finalizers:
+  - fabricinfra.netop.mgr/finalizer
+  generation: 1
+  managedFields:
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:bgp:
+          .: {}
+          f:aci_as_number: {}
+          f:remote_as_numbers: {}
+        f:credentials:
+          .: {}
+          f:hosts: {}
+          f:secretRef:
+            .: {}
+            f:name: {}
+        f:fabric_type: {}
+        f:leafs: {}
+        f:provision_fabric: {}
+        f:spines: {}
+        f:topology:
+          .: {}
+          f:rack: {}
+    manager: controller
+    operation: Update
+    time: "2023-11-17T15:29:38Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"fabricinfra.netop.mgr/finalizer": {}
+    manager: manager
+    operation: Update
+    time: "2023-11-17T15:29:38Z"
+  - apiVersion: netop.mgr/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:available:
+          .: {}
+          f:remote_as_numbers: {}
+        f:ready: {}
+    manager: manager
+    operation: Update
+    subresource: status
+    time: "2023-11-17T15:29:39Z"
+  name: k8s-bm-33
+  namespace: netop-manager
+  resourceVersion: "20453"
+  uid: d91b7c24-0e45-4660-a761-add5563a6ed4
+spec:
+  bgp:
+    aci_as_number: 2
+    remote_as_numbers:
+    - 1
+  credentials:
+    hosts:
+    - test
+    secretRef:
+      name: test1
+  fabric_type: aci
+  leafs: 2
+  provision_fabric: false
+  spines: 2
+  topology:
+    rack:
+    - aci_pod_id: 2
+      id: 2
+status:
+  available:
+    remote_as_numbers:
+    - 1
+  ready: true
